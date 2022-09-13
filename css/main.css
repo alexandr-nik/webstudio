@@ -243,6 +243,11 @@ select:-webkit-autofill:focus {
   letter-spacing: 0.02em;
   color: #212121;
 }
+@media screen and (max-width: 340px) {
+  .nav__link--mob {
+    font-size: 35px;
+  }
+}
 
 .nav__link--mob--active {
   color: #2196f3;

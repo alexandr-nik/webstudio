@@ -52,6 +52,9 @@
   line-height: 47px;
   letter-spacing: 0.02em;
   color: $secondary-color;
+  @media screen and (max-width:340px) {
+    font-size: 35px;
+  }
 }
 .nav__link--mob--active {
   color: $accent-color;
