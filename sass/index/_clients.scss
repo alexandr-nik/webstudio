@@ -1,0 +1,52 @@
+.clients {
+  padding: 60px 0;
+  @include desktop{
+    padding: 94px 0;
+  }
+  &__title {
+    @extend  %title;
+    margin-bottom: 30px;
+    @include desktop{
+      font-size: 36px;
+      line-height: 1.16;
+      margin-bottom: 50px;
+    }
+  }
+  &__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  @include tablet{
+    gap: 30px;
+  }
+  @include desktop{
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  }
+  &__link {
+    @include flex-center();
+    width: 210px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    fill: #afb1b8;
+    transition: border 250ms var(--cubic-bezeir), fill 250ms var(--cubic-bezeir);
+    @include tablet{
+      width: 226px;
+    }
+    @include desktop{
+      width: 170px;
+    }
+    &:focus,
+    &:hover {
+      border: 1px solid $accent-color;
+      fill: $accent-color;
+    }
+  }
+  &__icon {
+    width: 106px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,162 @@
+.footer__container {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 75px;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    padding: 0;
+ }
+}
+.footer {
+  padding: 60px 0;
+  background-color: $background-color-footer;
+}
+.footer__logo {
+  display: inline-block;
+  color: $white-color;
+  padding: 0;
+  margin-bottom: 20px;
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop{
+    align-items: flex-start;
+  }
+}
+.address__text,
+.address__mail,
+.address__tel {
+  display: block;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.address__text {
+  color: $white-color;
+  font-style: normal;
+  letter-spacing: 0.03em;
+}
+.footer__child:not(:last-child) {
+  margin-bottom: 8px;
+  @media screen and (min-width:1200px) {
+    margin-bottom: 9px;
+  }
+ }
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  @include desktop {
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
+}
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-left: auto;
+  }
+  @include desktop {
+    align-items: flex-start;
+   margin: 0;
+   margin-right: auto;
+  }
+}
+.subscribe__form{
+  @include desktop {
+    display: flex;
+  }
+}
+.footer__subscribe {
+  margin: 0 auto;
+  @include desktop {
+   margin: 0;
+  }
+}
+.social__title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+  margin-bottom: 20px;
+}
+.social__link {
+  @extend %social__link;
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer__svg {
+  fill: #ffffff;
+}
+.subcribe__title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+  margin-bottom: 20px;
+  @include desktop{
+    text-align: left;
+  }
+}
+.subscribe__mail {
+  display: block;
+  height: 50px;
+  width: 100%;
+  padding: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  @include tablet {
+    width: 450px;
+  }
+  @include desktop{
+    width: 358px;
+    margin: 0 12px 0 0;
+  }
+}
+.subscribe__button {
+  @include flex-center();
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: none;
+  color: $white-color;
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.subscribe__icon {
+  width: 24px;
+  height: 24px;
+  fill: $white-color;
+  margin-left: 10px;
+}

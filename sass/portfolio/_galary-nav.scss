@@ -1,0 +1,42 @@
+.galary__nav {
+display: flex;
+flex-wrap: wrap;
+column-gap: 8px;
+row-gap: 15px;
+padding-right: 15px;
+margin-bottom: 40px;
+@include tablet {
+  flex-wrap: nowrap;
+  padding: 0;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@include desktop {
+  margin-bottom: 50px;
+}
+}
+ .galary__button {
+    color: $secondary-color;
+    background-color: $backgroud-color-button;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px 22px;
+    box-shadow: none;
+    transition: background-color 250ms $cubic-bezeir, color 250ms $cubic-bezeir,
+    box-shadow 250ms $cubic-bezeir;
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background: $accent-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+    .galary__item:first-child &{
+      padding: 6px 25px;
+    }
+  }
+ 

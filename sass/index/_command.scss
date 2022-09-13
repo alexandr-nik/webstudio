@@ -1,0 +1,73 @@
+.command {
+    background-color: $backgroud-color-work;
+  padding: 60px 0;
+  @include desktop{
+    padding: 94px 0;
+  }
+ 
+  &__list {
+    @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    @include desktop{
+      flex-wrap: nowrap;
+    }
+  }
+  &__item {
+    max-width: 450px;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+   @media screen and(max-width:767px) {
+     &:not(:last-child){
+      margin-bottom: 30px;
+     }
+      }
+      @include tablet{
+        width: 354px;
+      }
+      @include desktop{
+        width: 270px;
+      }
+  }
+  &__title {
+    @extend %title;
+    margin-bottom: 30px;
+    @include desktop{
+      font-size: 36px;
+      line-height: 1.16;
+      margin-bottom: 50px;
+    }
+  }
+  &__card {
+    padding: 30px 5px 24px 5px;
+    background-color: $white-color;
+
+  }
+  &__subtitle {
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    line-height: 1.9;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  }
+}
+.social__list{
+  @extend %social__list;
+  justify-content: center;
+ }
+.social__link {
+  @extend %social__link;
+ }
+.social__svg {
+  @extend %social__svg;
+ }

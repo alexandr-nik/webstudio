@@ -1,0 +1,217 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 250ms $cubic-bezeir, opacity 250ms $cubic-bezeir,
+    visibility 250ms $cubic-bezeir;
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.2);
+    pointer-events: none;
+  }
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 450px;
+  height: 100%;
+  max-height: 609px;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 4px;
+  @media screen and (max-width: 440px) {
+    max-width: calc(100% - 20px);
+    height: calc(100% - 10px);
+   padding: 30px 10px 15px;
+  }
+  @media screen and (orientation: landscape) and (max-height:616px){
+    max-height: calc(100% - 5px);
+    padding: 30px 20px;
+    }
+   @include desktop {
+    width: 528px;
+    height: 581px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+    display: block;
+    margin-bottom: 12px;
+    @media screen and (max-width: 358px){
+      font-size: 17px;
+      line-height: 1.5;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      line-height: 1.5;
+    }
+    @include desktop {
+      line-height: 1.15;
+    }
+  }
+  &__btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon--close {
+    width: 18px;
+    height: 18px;
+    fill: #000000;
+    transition: fill 250ms $cubic-bezeir;
+    .modal__btn:hover &,
+    .modal__btn:focus & {
+      fill: $accent-color;
+    }
+  }
+  &__submit {
+    @include flex-center();
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: background 250ms $cubic-bezeir;
+    &:hover,
+    &:focus {
+      background: $button-accent-hover;
+    }
+  }
+}
+.form {
+  &__list {
+    margin-bottom: 10px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__name {
+    @extend %form__name;
+  }
+  &__box {
+    position: relative;
+  }
+  &__input {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    font-family: inherit;
+    padding-left: 35px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms $cubic-bezeir;
+    &:focus,
+    &:hover {
+      border: 1px solid $accent-color;
+      outline: none;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: $secondary-color;
+    transition: fill 250ms $cubic-bezeir;
+    .form__input:focus + & {
+      fill: $accent-color;
+    }
+  }
+}
+.comment {
+  margin-bottom: 20px;
+  &__name {
+    @extend %form__name;
+  }
+  &__textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &:focus,
+    &:hover,
+    &:focus-visible {
+      border: 1px solid $accent-color;
+      outline: none;
+    }
+    @media screen and (max-width: 440px) {
+      height: 90px;
+    }
+  }
+}
+.policy {
+  margin-bottom: 30px;
+  &__checkbox {
+    @extend %hidden__checkbox;
+  }
+  &__lable {
+    @extend %flex__center;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    @media screen and (max-width: 468px) {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+    }
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $accent-color;
+    padding-left: 4px;
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+    }
+  }
+}
+.policy__icon {
+  width: 16px;
+  height: 15px;
+  fill: $white-color;
+  margin-right: 8px;
+  background-size: cover;
+  border: 2px solid $secondary-color;
+  border-radius: 2px;
+  transition: background-color 250ms $cubic-bezeir, border 250ms $cubic-bezeir;
+  .policy__checkbox:checked + .policy__lable & {
+    background-color: $accent-color;
+    border: 2px solid $accent-color;
+  }
+  .policy__checkbox:focus + .policy__lable &,
+  .policy__checkbox:hover + .policy__lable & {
+    border: 2px solid $accent-color;
+  }
+}

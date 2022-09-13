@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebStudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css">
+  <link rel="stylesheet" href="./css/main.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__index">
+      <a href="" lang="en" class="logo header__logo"><span class="logo--accent">Web</span>Studio</a>
+      <button type="button" class="mobile__open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu__icon">
+          <use href="./images/icons.svg#icon-mob-menu" class="menu__icon--open"></use>
+        </svg>
+      </button>
+      <div class="mobile__nav js-menu-container" id="mobile-menu">
+        <button type="button" class="mobile__menu--close js-close-menu">
+        <svg class="menu__icon">
+          <use href="./images/icons.svg#icon-mob-menu-close" class="menu__icon--close"></use>
+        </svg>
+        </button>
+        <ul class="nav__list--mob">
+          <li class="nav__item--mob">
+            <a href="./index.html" class="nav__link--mob ">Студія</a>
+          </li>
+          <li class="nav__item--mob">
+            <a href="./portfolio.html" class="nav__link--mob nav__link--mob--active">Портфоліо</a>
+          </li>
+          <li class="nav__item--mob"><a href="" class="nav__link--mob">Контакти</a></li>
+        </ul>
+        <ul class="contacts__list--mob">
+          <li class="contacts__item--mob">
+            <a href="tel:+380961111111" class="contacts__link--tel">
+              +38 096 111 11 11</a>
+          </li>
+          <li>
+            <a href="mailto:info@devstudio.com" lang="en" class="contacts__link--mail">
+              info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="contact__social--list">
+          <li class="contact__social--item"><a href="" class="contact__social--link">Instagram</a></li>
+          <li class="contact__social--item"><a href="" class="contact__social--link">Twitter</a></li>
+          <li class="contact__social--item"><a href="" class="contact__social--link">Facebook</a></li>
+          <li class="contact__social--item"><a href="" class="contact__social--link">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="main__nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link ">Студія</a>
+            </li>
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__link nav__link--active">Портфоліо</a>
+            </li>
+            <li class="nav__item"><a href="" class="nav__link">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="contacts__list header__contacts">
+          <li class="contacts__item">
+            <a href="mailto:info@devstudio.com" lang="en" class="contacts__link">
+              <svg class="contacts__icon contacts__icon--mailto">
+                <use href="./images/icons.svg#icon-logo-mail"></use>
+              </svg>info@devstudio.com</a>
+          </li>
+          <li>
+            <a href="tel:+380961111111" class="contacts__link"><svg class="contacts__icon contacts__icon--tel">
+                <use href="./images/icons.svg#icon-logo-tel"></use>
+              </svg>+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="galary">
+      <div class="container">
+        <h1 class="visibility-hiden">Наші пропозиції</h1>
+        <ul class="galary__nav">
+          <li class="galary__item"><button type="button" class="galary__button">Усі</button></li>
+          <li class="galary__item"><button type="button" class="galary__button">Веб-сайти</button></li>
+          <li class="galary__item"><button type="button" class="galary__button">Додатки</button></li>
+          <li class="galary__item"><button type="button" class="galary__button">Дизайн</button></li>
+          <li class="galary__item"><button type="button" class="galary__button">Маркетинг</button></li>
+        </ul>
+        <ul class=" poster__list">
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-1-desktop.jpg 1x,
+                   ./images/galary-1-desktop-2x.jpg 2x, 
+                   ./images/galary-1-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-1-tablet.jpg 1x,
+                   ./images/galary-1-tablet-2x.jpg 2x, 
+                   ./images/galary-1-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-1-mobile.jpg 1x,
+                   ./images/galary-1-mobile-2x.jpg 2x, 
+                   ./images/galary-1-mobile-3x.jpg 3x">
+                  <img src="./images/galary-1-mobile.jpg" class="poster__img" alt="Технокряк" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Технокряк</h2>
+                <p class="poster__text">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-2-desktop.jpg 1x,
+                   ./images/galary-2-desktop-2x.jpg 2x, 
+                   ./images/galary-2-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-2-tablet.jpg 1x,
+                   ./images/galary-2-tablet-2x.jpg 2x, 
+                   ./images/galary-2-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-2-mobile.jpg 1x,
+                   ./images/galary-2-mobile-2x.jpg 2x, 
+                   ./images/galary-2-mobile-3x.jpg 3x">
+                  <img src="./images/galary-2-mobile.jpg" class="poster__img" alt="Постер" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Постер <span lang="en">New Orlean vs Golden Star</span> </h2>
+                <p class="poster__text">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-3-desktop.jpg 1x,
+                   ./images/galary-3-desktop-2x.jpg 2x, 
+                   ./images/galary-3-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-2-tablet.jpg 1x,
+                   ./images/galary-3-tablet-2x.jpg 2x, 
+                   ./images/galary-3-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-3-mobile.jpg 1x,
+                   ./images/galary-3-mobile-2x.jpg 2x, 
+                   ./images/galary-3-mobile-3x.jpg 3x">
+                  <img src="./images/galary-3-mobile.jpg" class="poster__img" alt="Ресторан" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Ресторан <span lang="en">Seafood</span> </h2>
+                <p class="poster__text">Додаток</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-4-desktop.jpg 1x,
+                   ./images/galary-4-desktop-2x.jpg 2x, 
+                   ./images/galary-4-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-4-tablet.jpg 1x,
+                   ./images/galary-4-tablet-2x.jpg 2x, 
+                   ./images/galary-4-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-4-mobile.jpg 1x,
+                   ./images/galary-4-mobile-2x.jpg 2x, 
+                   ./images/galary-4-mobile-3x.jpg 3x">
+                  <img src="./images/galary-4-mobile.jpg" class="poster__img" alt="Проект Prime" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Проект <span lang="en">Prime</span> </h2>
+                <p class="poster__text">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-5-desktop.jpg 1x,
+                   ./images/galary-5-desktop-2x.jpg 2x, 
+                   ./images/galary-5-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-5-tablet.jpg 1x,
+                   ./images/galary-5-tablet-2x.jpg 2x, 
+                   ./images/galary-5-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-5-mobile.jpg 1x,
+                   ./images/galary-5-mobile-2x.jpg 2x, 
+                   ./images/galary-5-mobile-3x.jpg 3x">
+                  <img src="./images/galary-5-mobile.jpg" class="poster__img" alt="Проект Boxes " />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Проект <span lang="en">Boxes</span>
+                </h2>
+                <p class="poster__text">Додаток</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-6-desktop.jpg 1x,
+                  ./images/galary-6-desktop-2x.jpg 2x, 
+                  ./images/galary-6-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-6-tablet.jpg 1x,
+                  ./images/galary-6-tablet-2x.jpg 2x, 
+                  ./images/galary-6-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-6-mobile.jpg 1x,
+                  ./images/galary-6-mobile-2x.jpg 2x, 
+                  ./images/galary-6-mobile-3x.jpg 3x">
+                  <img src="./images/galary-6-mobile.jpg" class="poster__img" alt="Inspiration has no Borders" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title" lang="en">Inspiration has no Borders</h2>
+                <p class="poster__text">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-7-desktop.jpg 1x,
+                  ./images/galary-7-desktop-2x.jpg 2x, 
+                  ./images/galary-7-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-7-tablet.jpg 1x,
+                  ./images/galary-7-tablet-2x.jpg 2x, 
+                  ./images/galary-7-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-7-mobile.jpg 1x,
+                  ./images/galary-7-mobile-2x.jpg 2x, 
+                  ./images/galary-7-mobile-3x.jpg 3x">
+                  <img src="./images/galary-7-mobile.jpg" class="poster__img" alt="Limited Edition" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Издание <span lang="en">Limited Edition</span> </h2>
+                <p class="poster__text">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-8-desktop.jpg 1x,
+                  ./images/galary-8-desktop-2x.jpg 2x, 
+                  ./images/galary-8-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-8-tablet.jpg 1x,
+                  ./images/galary-8-tablet-2x.jpg 2x, 
+                  ./images/galary-8-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-8-mobile.jpg 1x,
+                  ./images/galary-8-mobile-2x.jpg 2x, 
+                  ./images/galary-8-mobile-3x.jpg 3x">
+                  <img src="./images/galary-8-mobile.jpg" class="poster__img" alt="Проект LAB" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Проект <span lang="en">LAB</span> </h2>
+                <p class="poster__text">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="poster__item">
+            <a href="" class="poster__link">
+              <div class="poster__overflow--block">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="./images/galary-9-desktop.jpg 1x,
+                  ./images/galary-9-desktop-2x.jpg 2x, 
+                  ./images/galary-9-desktop-3x.jpg 3x">
+                  <source media="(min-width:768px)" srcset="./images/galary-9-tablet.jpg 1x,
+                  ./images/galary-9-tablet-2x.jpg 2x, 
+                  ./images/galary-9-tablet-3x.jpg 3x">
+                  <source media="(max-width:767px)" srcset="./images/galary-9-mobile.jpg 1x,
+                  ./images/galary-9-mobile-2x.jpg 2x, 
+                  ./images/galary-9-mobile-3x.jpg 3x">
+                  <img src="./images/galary-9-mobile.jpg" class="poster__img" alt="Galary1" />
+                </picture>
+                <div class="poster__overflow">
+                  <p class="poster__overflow__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                    сервісів. Все це дозволить
+                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу</p>
+                </div>
+              </div>
+              <div class="poster__block">
+                <h2 class="poster__title">Growing Business</h2>
+                <p class="poster__text">Додаток</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__address">
+        <a href="./index.html" lang="en" class="footer__logo logo"><span class="logo--accent">Web</span>Studio</a>
+        <address class="footer__contact">
+          <p class="footer__child address__text">м. Київ, пр-т Лесі Українки, 26</p>
+          <a href="mailto:info@example.com" lang="en" class="address__mail footer__child">info@example.com</a>
+          <a href="tel:+380991111111" class="footer__child address__tel">+38 099 111 11 11</a>
+        </address>
+      </div>
+      <div class="footer__social">
+        <h2 class="social__title">приєднуйтесь</h2>
+        <ul class="social__list">
+          <li>
+            <a href="" class="social__link"><svg class="social__svg footer__svg">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg></a>
+          </li>
+          <li>
+            <a href="" class="social__link"><svg class="social__svg footer__svg">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg></a>
+          </li>
+          <li>
+            <a href="" class="social__link"><svg class="social__svg footer__svg">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg></a>
+          </li>
+          <li>
+            <a href="" class="social__link"><svg class="social__svg footer__svg">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__subscribe">
+        <label for="subscribe-mail" class="subcribe__title">Підпишіться на розсилку</label>
+        <form class="subscribe__form">
+          <input type="email" name="subscribe-mail" class="subscribe__mail" id="subscribe-mail" placeholder="Email"
+            required />
+          <button type="submit" class="subscribe__button">
+            Підписатися
+            <svg class="subscribe__icon">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script src="./js/mobile-menu.js"></script>
+</body>
+
+</html>

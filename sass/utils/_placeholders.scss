@@ -1,0 +1,71 @@
+%title {
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  %logo{
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+    padding:16px 0;
+   }
+
+  %flex__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  %social__list {
+    display: flex;
+    gap: 10px;
+  }
+  %social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: inherit;
+    transition: background-color 250ms $cubic-bezeir;
+    &:hover,
+    &:focus {
+      background: #2196f3;
+    }
+  }
+  %social__svg {
+    width: 20px;
+    height: 20px;
+    fill: #afb1b8;
+    transition: fill 250ms $cubic-bezeir;
+    .social__link:hover &,
+    .social__link:focus & {
+      fill: #ffffff;
+    }
+  }
+  %form__name{
+    display: block;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+      margin-bottom: 4px;
+  }
+  %hidden__checkbox{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
